@@ -1,0 +1,22 @@
+<h1>Sign up</h1>
+
+<%= form_with model: @user, url: user_path, local: true do |f| %>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.submit "Sign up" %>
+  </div>
+  <%= link_to "Login", login_path %>
+<% end %>
